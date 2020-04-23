@@ -1,0 +1,416 @@
+
+# This file defines settings that affect the entire site--values that are
+# expected to be set up once and rarely edited.  Frequently edited data should
+# be relocated to Jekyll's data files (in the _data subdirectory).
+#
+# For technical reasons, this file is *NOT* reloaded automatically when Jekyll
+# is run via:
+# 'bundle exec jekyll serve'
+# In order for changes to this file to be reflected, restart the server process.
+#
+# Links to some YAML syntax reference guides are provided below:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+
+
+#--------------------
+# Directory Structure
+
+# Site Source
+# Change the directory where Jekyll will read files.
+source: Source
+
+# Site Destination
+# Change the directory where Jekyll will write files.
+destination: Build
+
+# Jekyll Cache Directory
+# Change the directory where Jekyll will cache files.
+# WARNING: In order for cache_dir to be respected and for a cache directory to
+# actually be generated, `safe` and `disable_disk_cache` must each be false.
+cache_dir: Temporary/.jekyll-cache
+
+# Collections Directory
+# Specify the location of the collections directory (relative to the directory
+# defined by the 'source' variable).  The _drafts and _posts directories are
+# subdirectories of the collections directory.
+collections_dir: Collections
+
+# Data Directory
+# Change the directory where Jekyll will read additional configuration data
+# files (relative to `source`).
+data_dir: Data
+
+# Includes Directory
+# Change the directory where Jekyll will read include files (relative to
+# `source`).
+includes_dir: Includes
+
+# Layouts Directory
+# Change the directory where Jekyll will read layout files (relative to
+# `source`).
+layouts_dir: Layouts
+
+# Plugins Directory
+# Change the directory where Jekyll will read plugins files (relative to
+# `source`).
+plugins_dir: Plugins
+
+# SASS-specific configuration.
+sass:
+  # SASS Directory
+  # Change the directory where Jekyll will read SASS files.
+  sass_dir: CSS
+  # Style
+  # Change the output format for the generated CSS files.
+  # Options:
+  # - nested
+  #`- compact
+  # - compressed
+  # - expanded
+  style: :compressed
+
+# Permalink
+# Defines the default URL format for pages, posts, and collections.  Supports
+# structuring the source directory differently from the generated site.
+permalink: pretty
+
+# Relative Permalinks
+# Whether permalinks for pages in subfolders are treated as relative to the site
+# source directory or as relative to their parent directory instead.
+# WARNING: Must be false for Jekyll, ~>3.0.
+relative_permalinks: false
+
+# Pagination Path
+# The pagination path to append to URLs.
+paginate_path: /page_:num
+
+# Directory Structure
+#--------------------
+
+
+#--------
+# Plugins
+
+# Safe Mode
+# Whether or not to:
+# - Disable Custom plugins
+# - Disable caching to disk
+# - Ignore symbolic links
+safe: false # true
+
+# Whitelist
+whitelist: []
+
+# Plugins
+# The plugins to be run with the site.
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Plugins
+#--------
+
+
+#------------------
+# Filtering Content
+
+# Exclude
+# Extension of the internal default list of files and/or directories to be
+# excluded from processing.  Entries in this list will not end up in the
+# 'destination' ('Build') directory.
+#
+# NOTE: An excluded item may be explicitly processed by listing the
+# corresponding path in the list defined by the `include` key.
+# WARNING: Dot-prefixed files and directories are excluded by default.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+exclude:
+  - Data/
+  - Includes/
+  - Layouts/
+  - Plugins/
+  - Temporary/
+
+# Include
+# Include files and/or directories in the conversion.
+# NOTE: Dot-prefixed files are excluded by default.
+#
+# include: [".htaccess"]
+include: []
+
+# Markdown File Extensions
+# Extensions of files that will be treated as Markdown for processing.
+markdown_ext: "md,mkd,mkdn,mkdown,markdown"
+
+# Drafts
+# Whether or not to process and render draft posts.
+show_drafts: false
+
+# Unpublished
+# Whether or not to render posts that were marked as unpublished.
+unpublished: false
+
+# Future
+# Whether or not to publish posts or collection documents with a future date.
+future: false
+
+# Limit Posts
+# The maximum number of posts to parse and publish.
+limit_posts: 200
+
+# Filtering Content
+#------------------
+
+
+#----------
+# Compilers
+
+# Syntax Highlighter
+# Specify the tool to use to provide syntax highlighting for code blocks.  For
+# additional information on syntax highlighting, refer to the Jekyll page:
+# [Code Snippet Highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting)
+highlighter: rouge
+
+# Markdown
+# The processor to use for Markdown files.
+# WARNING: Use of custom [Markdown] processors is prohibited in safe mode and
+# will cause the build to fail.  When in safe mode, use built-in kramdown
+# Markdown processor instead.
+markdown: CommonMarkGhPages # Leverages CommonMark
+# markdown: kramdown
+
+# Theme
+# The theme to be used during site generation.
+theme: minima
+
+# Compilers
+#----------
+
+
+#------------
+# Compilation
+
+# Disable Disk Cache
+# Disable caching of content to disk in order to skip creating a .jekyll-cache
+# or similar directory at the source to avoid interference with virtual
+# environments and third-party directory watchers. Caching to disk is always
+# disabled in safe mode.
+disable_disk_cache: true
+
+# Keep Files
+# When destroying the generated files in the directory defined by 'destination'
+# (default '_site'), ignore the specified files.  This is useful to avoid
+# destroying files created by generators other than Jekyll.
+# keep_files: [".git", ".svn"]
+keep_files: []
+
+# Incremental Builds
+# Whether or not to enable the experimental incremental build feature.
+# NOTE: Incremental build only re-builds posts and pages that have changed,
+# resulting in significant performance improvements for large sites, but may
+# also break site generation in certain cases.
+incremental: false
+
+liquid:
+  error_mode        : warn
+  strict_filters    : false
+  strict_variables  : false
+
+# Strict Front Matter
+# Whether or not to fail a build when there are YAML syntax errors in a page's
+# front matter.
+strict_front_matter: true
+
+# Compilation
+#------------
+
+
+#--------------------
+# Markdown Processors
+
+# CommonMark
+# A strongly defined, highly compatible specification of Markdown, CommonMark
+# is the current markdown processor used by Visual Studio Code.
+commonmark:
+  options: ['SMART', 'FOOTNOTES']
+  extensions: ['strikethrough', 'autolink', 'table', 'tagfilter']
+
+kramdown:
+  auto_ids          : true
+  entity_output     : as_char
+  toc_levels        : [1, 2, 3, 4, 5, 6]
+  smart_quotes      : lsquo,rsquo,ldquo,rdquo
+  input             : GFM
+  hard_wrap         : false
+  footnote_nr       : 1
+  show_warnings     : false
+
+rdiscount:
+  extensions        : []
+
+redcarpet:
+  extensions        : []
+
+# Jekyll Compress HTML
+# [jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html)
+# A Jekyll layout that compresses HTML in pure Liquid.
+compress_html:
+  clippings: all
+  comments: ['<!-- ', ' -->']
+  endings: []
+  blanklines: false
+  profile: false
+  startings: []
+
+# Markdown Processors
+#--------------------
+
+
+#-----------
+# Outputting
+
+# Collections
+# Define groups of related content.  Each collection has its own subdirectory
+# under the collections directory that is named by the collection's name
+# prefixed with an underscore.
+collections:
+  posts:
+    output: true # Render posts collection by default
+
+# Defaults
+# Default front matter variables.
+defaults:
+  -
+    scope:
+      path: Assets/Fonts
+    values:
+      font: true
+  -
+    scope:
+      path: Assets/Images
+    values:
+      image: true
+  -
+    scope:
+      path: Collections/_posts
+      type: posts
+    values:
+      layout: post
+      published: true
+  -
+    scope:
+      path: Pages
+      type: pages
+    values:
+      layout: page
+      published: true
+      # WARNING: The permalink variable doesn't work for pages when defined
+      # here.
+
+# Encoding
+# The encoding of files.
+# WARNING: UTF-8 encoding might break Windows!!!
+# encoding: utf-8
+
+# Excerpt Separator
+# When generating excerpt definitions for posts, the excerpt separator is used
+# to determine whether the excerpt terminates.
+excerpt_separator: "\n\n"
+
+# LSI
+# Whether or not to produce an index for related posts.
+# WARNING: Requires the classifier-reborn plugin.
+lsi: false
+
+# Time Zone
+# The time zone used for site generation.
+timezone: America/New_York
+
+# Outputting
+#-----------
+
+
+#----------
+# Debugging
+
+# Quiet
+# Silence the logging output.
+quiet: false
+
+# Verbose
+# Provide more detailed logging output.
+verbose: true
+
+# Liquid Profiler
+# Whether or not to generate a Liquid rendering profile to help you identify
+# performance bottlenecks.
+profile: false
+
+# Debugging
+#----------
+
+
+#---------------------
+# Server Configuration
+
+# Detach
+# Whether or not to detach the server from the terminal.
+detach: false
+
+# Local Server Port
+# Listen on the given port.
+port: 8080
+
+# URL
+# The base hostname & protocol for your site, e.g. http://example.com
+# TODO: Determine the difference between function of url and host variables...
+# url: ''
+
+# Local Server Hostname
+# Listen at the given hostname.
+# host: 127.0.0.1
+# host: 'https://reference.github.io/'
+
+# Base URL
+# Serve the website from the given base URL.
+# NOTE: Jekyll serves webpages according to the following formula:
+# site.url + site.baseurl + relative_url
+# As such, the host name should not be included in baseurl.
+# baseurl: ''
+
+# Live Reload
+# Reload a page automatically on the browser when its content is edited.
+# WARNING: There is an issue on Windows in which attempting to use the
+# livereload feature will cause calls to jekyll serve to fail.  As a
+# workaround, install the EventMachine library manually under the ruby
+# platform as follows:
+# 1. Add the ruby platform to the bundle to support the ruby version of
+# EventMachine:
+# bundle lock --add-platform ruby
+# 2. Uninstall the existing x64-mingw32 build of EventMachine:
+# gem uninstall eventmachine # May require: --force
+# 3. Install the ruby build of EventMachine:
+# gem install eventmachine --platform ruby
+livereload: true
+
+# Force Polling
+# Force watch to use polling.
+force_polling: false
+
+# Show Directory Listing
+# Whether or not to allow the directory structure of the website to be viewed.
+show_dir_listing: false
+
+# Server Configuration
+#---------------------
