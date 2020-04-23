@@ -1,0 +1,39 @@
+
+#-------------------------------
+# General Site Settings
+# These are used to personalize the site. They can be accessed from HTML files
+# via {{ site.title }}, {{ site.email }}, etc.
+# Any custom variable can be created here, and it will be accessible in the
+# templates via {{ site.myvariable }}.
+
+# Edit the following fields as appropriate.
+title: StaticJekyllWebsiteTemplate-Public
+description: A publicly available template starting point for building Jekyll-based static websites.
+email: username@gmail.com
+twitter_username: username
+github_username:  username
+#-------------------------------
+
+#-------------------------------
+# SEO Settings
+# Providing SEO (Search Engine Optimization) information will make the website
+# more searchable on the internet.
+
+# Edit the following fields as appropriate.
+# seo:
+#   description: 'A reference guide for preparing one's development environment and corresponding tools.'
+#   rel-author: 'https://www.author.com/'
+#   rel-publisher: 'https://www.publisher.com/'
+#-------------------------------
+
+#-------------------------------
+# Google Analytics Section
+# Provides information about visitors to your website.
+# Information regarding usage of Google Analytics can be found at the link
+# below:
+# http://support.google.com/analytics/answer/1008065
+
+# NOTE: In order to use Google Analytics for basic web tracking, uncomment the
+# following line, and enter the appropriate UA-Code.
+# google-analytics-ua: UA-XXXXXX-X
+#-------------------------------
