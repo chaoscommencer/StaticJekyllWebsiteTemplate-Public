@@ -1,0 +1,34 @@
+---
+# This is a minimally modified version of the default.html layout from the
+# jekyll-compress-html repository.
+layout: compress
+---
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <!-- Edit this as appropriate. -->
+    <link rel="stylesheet" href="/path/to/css.css">
+    <!-- Edit this as appropriate. -->
+    <link rel="icon" href="/path/to/favicon.png">
+    {% if page.prefetch %}
+    <link rel="prefetch" href="{{ page.prefetch }}">
+    <link rel="prerender" href="{{ page.prefetch }}">
+    {% endif %}
+  </head>
+
+  <body>
+    <!-- dummy comment -->
+    <div class="row">
+      <div class="medium-10 medium-offset-2 large-8 large-offset-4 columns">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+    </div>
+  </body>
+
+</html>
