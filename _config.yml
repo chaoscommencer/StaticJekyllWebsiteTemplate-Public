@@ -132,6 +132,7 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 exclude:
+  - css/Monokai.css
   - data/
   - includes/
   - layouts/
