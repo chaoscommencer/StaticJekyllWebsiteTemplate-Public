@@ -154,6 +154,7 @@ plugins:
 #     - vendor/gems/
 #     - vendor/ruby/
 exclude:
+    - CSS/Syntax Highlighter.scss
     - data/
     - includes/
     - layouts/
