@@ -1,0 +1,16 @@
+
+// Correct highlighting background colors from theme.
+.highlight {
+    background: #272822;
+
+    code[class|="language"] {
+        background-color: #272822;
+    }
+
+    .highlighter-rouge & {
+        background: #272822;
+    }
+}
+
+// Import user-selected syntax highlighter stylesheet.
+@import "Monokai";
