@@ -132,6 +132,7 @@ plugins:
 #   - vendor/ruby/
 exclude:
   - CSS/Monokai.css
+  - CSS/Syntax Highlighter.scss
   - Data/
   - Includes/
   - Layouts/
