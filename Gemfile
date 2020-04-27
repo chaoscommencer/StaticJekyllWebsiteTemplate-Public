@@ -24,22 +24,22 @@ source 'https://rubygems.org'
 ruby '2.7.1', :patchlevel => '83'
 
 # Groups exist for test, development, production...
-group :development do
-  # Jekyll
-  # A simple, blog-aware, static-site generator.
-  # Mandate the version of Jekyll to be run.  Run Jekyll as follows:
-  # bundle exec jekyll serve
-  gem 'jekyll', '~> 4.0.0'
-end
-
-# # Groups exist for test, development, production...
-# group :production do
-#   # github-pages
-#   # Bootstrap the GitHub Pages Jekyll environment locally.  If you want to use
-#   # GitHub Pages, remove the "gem 'jekyll'" above and uncomment the line below.
-#   # To upgrade, run `bundle update github-pages`.  Up to version 204.
-#   gem 'github-pages', group: :jekyll_plugins
+# group :development do
+#   # Jekyll
+#   # A simple, blog-aware, static-site generator.
+#   # Mandate the version of Jekyll to be run.  Run Jekyll as follows:
+#   # bundle exec jekyll serve
+#   gem 'jekyll', '~> 4.0.0'
 # end
+
+# Groups exist for test, development, production...
+group :production do
+  # github-pages
+  # Bootstrap the GitHub Pages Jekyll environment locally.  If you want to use
+  # GitHub Pages, remove the "gem 'jekyll'" above and uncomment the line below.
+  # To upgrade, run `bundle update github-pages`.  Up to version 204.
+  gem 'github-pages', group: :jekyll_plugins
+end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
