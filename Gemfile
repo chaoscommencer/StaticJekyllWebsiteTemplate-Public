@@ -38,7 +38,7 @@ group :production do
   # Bootstrap the GitHub Pages Jekyll environment locally.  If you want to use
   # GitHub Pages, remove the "gem 'jekyll'" above and uncomment the line below.
   # To upgrade, run `bundle update github-pages`.  Up to version 204.
-  gem 'github-pages', group: :jekyll_plugins
+  gem 'github-pages', '~> 222', group: :jekyll_plugins
 end
 
 # If you have any plugins, put them here!
