@@ -1,18 +1,141 @@
 # StaticJekyllWebsiteTemplate-Public
 
-A publicly available template starting point for building Jekyll-based static websites.
+A publicly available template starting point for building `Jekyll`-based static websites.
 
 ## Requirements
 
-This site uses Ruby gems.  A Ruby development environment with Bundler must be installed in order to run this site.
+This site uses `Ruby` gems.  A `Ruby` development environment with `Bundler` must be installed in order to run this site.
 
-For more information regarding Ruby installation refer to the Jekyll page: [Installation](https://jekyllrb.com/docs/installation/).
+The tool `rbenv` was selected to allow for the use of the latest versions of `Ruby` and `Bundler` in a `Debian` environment.  `Rbenv` is a lightweight `Ruby` version management tool which allows the user to easily switch `Ruby` versions. By default `rbenv` doesn’t handle installation of `Ruby` versions, so `ruby-build`--a tool which assists in the installation of any `Ruby` version--must also be installed. It is available as a standalone program and as a plugin for `rbenv`.
+
+The environment can be prepared for development as follows:
+
+1. Update the packages index database:
+
+    ```bash
+    sudo apt update
+    ```
+
+2. Upgrade those packages which have a new release available to the platform, as defined in packages index database:
+
+    ```bash
+    sudo apt upgrade -y
+    ```
+
+3. Install common build tools:
+
+    ```bash
+    sudo apt install build-essential
+    ```
+
+4. Install `zlib`--a library implementing the deflate compression method found in `gzip` and `PKZIP` (this package includes the development support files):
+
+    ```bash
+    sudo apt install zlib1g-dev
+    ```
+
+5. Install `autoconf` (should already be installed):
+
+    ```bash
+    sudo apt install autoconf
+    ```
+
+6. Install `bison` (should already be installed):
+
+    ```bash
+    sudo apt install bison
+    ```
+
+7. Install the packages required for the `ruby-build` tool to build `Ruby` from source:
+
+    ```bash
+    sudo apt install git curl libssl-dev libreadline-dev libyaml-dev libncurses5-dev libffi-dev libgdbm-dev
+    ```
+
+8. Install both `rbenv` and `ruby-build`:
+
+    ```bash
+    curl -sL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash -
+    ```
+
+    **NOTE**: The script will clone both rbenv and ruby-build repositories from GitHub to ~/.rbenv directory. The installer script also calls another script which will try to verify the installation.
+
+9. Add `$HOME/.rbenv/bin` to the user `PATH`:
+
+    ```bash
+    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+    echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+    source ~/.bashrc
+    ```
+
+10. Determine the latest stable version of `Ruby` available by listing available versions:
+
+    ```bash
+    rbenv install -l
+    ```
+
+11. Install the latest stable version of `Ruby`:
+
+    ```bash
+    rbenv install 2.7.1
+    ```
+
+12. Set the latest stable version of `Ruby` as the global default version:
+
+    ```bash
+    rbenv global 2.7.1
+    ```
+
+13. Verify that `Ruby` was properly installed by printing the version number:
+
+    ```bash
+    ruby -v
+    ```
+
+    **NOTE**: The expected result should appear as follows:
+
+    ```bash
+    # ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux]
+    ```
+
+14. Verify that `rbenv` is properly set up using this `rbenv-doctor` script:
+
+    ```bash
+    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+    ```
+
+15. Set up `Ruby` to install gems to `~/gems` by default:
+
+    ```bash
+    echo '# Set up Ruby to install gems to `~/gems` by default' >> ~/.bashrc
+    echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+    echo 'export PATH="$GEM_HOME/bin:$PATH"' >> ~/.bashrc
+    source ~/.bashrc
+    ```
+
+16. Install `Bundler`:
+
+    ```bash
+    gem install bundler
+    ```
+
+    **NOTE**: `Bundler` parses `Gemfile` configuration files to determine and download gem project dependencies.
+
+For more information regarding `rbenv` installation refer to the GitHub repository: [rbenv](https://github.com/rbenv/rbenv).
+
+For more information regarding generic `Ruby` installation refer to the `Jekyll` page: [Installation](https://jekyllrb.com/docs/installation/).
 
 ## Usage
 
 There are very few steps required to run this site.  First its dependencies must be installed, and then it can be served.
 
-1. Install the Ruby gem dependencies for the site:
+1. To avoid `Ruby` gem versioning conflicts, configure local `Ruby` gem install path:
+
+    ```bash
+    bundle config set path 'vendor/bundle'
+    ```
+
+1. Install the `Ruby` gem dependencies for the site:
 
     ```bash
     bundle install
@@ -26,7 +149,7 @@ There are very few steps required to run this site.  First its dependencies must
 
 ## Directory Structure
 
-StaticJekyllWebsiteTemplate-Public is designed to leverage the following directory structure:
+`StaticJekyllWebsiteTemplate-Public` is designed to leverage the following directory structure:
 
 ```plaintext
 .
