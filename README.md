@@ -381,7 +381,7 @@ During compilation Jekyll replaces include commands with the content specified i
 By default the Liquid include command:
 
 ```liquid
-{% include path/to/file.html %}
+\{\% include path/to/file.html \%\}
 ```
 
 will search for the corresponding file relative to the `includes/` directory.
