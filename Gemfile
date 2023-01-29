@@ -7,6 +7,7 @@
 
 # Install gems according to the Gemfile definition (rerun this after any
 # modifications are made to this Gemfile):
+# bundle config set path 'vendor/bundle'
 # bundle install
 
 # Alternatively, if Jekyll is already installed, initialize a new Jekyll
@@ -24,13 +25,14 @@ source 'https://rubygems.org'
 ruby '2.7.1', :patchlevel => '83'
 
 # Groups exist for test, development, production...
-group :development do
-    # Jekyll
-    # A simple, blog-aware, static-site generator.
-    # Mandate the version of Jekyll to be run.  Run Jekyll as follows:
-    # bundle exec jekyll serve
-    gem 'jekyll', '~> 4.0.0'
-end
+# group :development do
+#     # Jekyll
+#     # A simple, blog-aware, static-site generator.
+#     # Mandate the version of Jekyll to be run.  Run Jekyll as follows:
+#     # bundle exec jekyll serve
+#     gem 'jekyll', '~> 4.0.1'
+# end
+gem 'jekyll', '~> 4.0.1'
 
 # # Groups exist for test, development, production...
 # group :production do
@@ -39,7 +41,9 @@ end
 #     # use GitHub Pages, remove the "gem 'jekyll'" above and uncomment the line
 #     # below.
 #     # To upgrade, run `bundle update github-pages`.  Up to version 204.
-#     gem 'github-pages', group: :jekyll_plugins
+#     gem 'multipart-post', '~> 2.1', '>= 2.1.1'
+#     gem 'sassc', '~> 2.3'
+#     gem 'github-pages', group: :jekyll_plugins #, :platforms => :x64_mingw32
 # end
 
 # If you have any plugins, put them here!
@@ -74,7 +78,7 @@ group :jekyll_plugins do
     # gem uninstall eventmachine # May require: --force
     # 3. Install the ruby build of EventMachine:
     # gem install eventmachine --platform ruby
-    gem 'eventmachine', :platforms => :ruby # Version 1.2.7
+    # gem 'eventmachine', :platforms => :ruby # Version 1.2.7
 
     # jekyll-seo-tag
     # A Jekyll plugin to add metadata tags for search engines and social
@@ -96,7 +100,7 @@ group :development do
     # A simple, easy-to-extend, drop-in replacement for the pygments syntax
     # highlighter.
     # NOTE: Only required for development.
-    gem 'rouge', '~> 3.17.0'
+    gem 'rouge', '~> 3.19.0'
 end
 
 # Minima
@@ -115,5 +119,5 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
     # TZInfo::Data
     # TZInfo::Data contains data from the IANA Time Zone database packaged as
     # Ruby modules for use with TZInfo.
-    gem 'tzinfo-data', '~> 1.2019.3'
+    gem 'tzinfo-data', '~> 1.2020.1', :platforms => [:mingw, :mswin]
 end
