@@ -22,7 +22,7 @@
 source 'https://rubygems.org'
 
 # Enforce minimum required Ruby version and patch level.
-ruby '3.2.0', :patchlevel => '83'
+ruby '3.3.0', :patchlevel => '0'
 
 # Groups exist for test, development, production...
 # group :development do
@@ -30,9 +30,9 @@ ruby '3.2.0', :patchlevel => '83'
 #   # A simple, blog-aware, static-site generator.
 #   # Mandate the version of Jekyll to be run.  Run Jekyll as follows:
 #   # bundle exec jekyll serve
-#   gem 'jekyll', '~> 4.0.0'
+#   gem 'jekyll', '~> 4.0.1'
 # end
-gem 'jekyll', '~> 4.0.1'
+gem 'jekyll', '~> 3.9.0'
 
 # Groups exist for test, development, production...
 group :production do
@@ -42,18 +42,18 @@ group :production do
     # To upgrade, run `bundle update github-pages`.  Up to version 204.
 #     gem 'multipart-post', '~> 2.1', '>= 2.1.1'
 #     gem 'sassc', '~> 2.3'
-    gem 'github-pages', '~> 222', group: :jekyll_plugins #, :platforms => :x64_mingw32
+    gem 'github-pages', '~> 228', group: :jekyll_plugins #, :platforms => :x64_mingw32
 end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   # jekyll-commonmark-ghpages
   # A CommonMark generator for Jekyll
-  gem 'jekyll-commonmark-ghpages', '~> 0.1.6'
+  gem 'jekyll-commonmark-ghpages', '~> 0.4.0'
 
   # jekyll-feed
   # A Jekyll plugin to generate an Atom feed of your Jekyll posts.
-  gem 'jekyll-feed', '~> 0.13.0'
+  gem 'jekyll-feed', '~> 0.15.1'
 
   # jekyll-livereload
   # The Jekyll LiveReload plugin adds additional command line options to the
@@ -83,7 +83,7 @@ group :jekyll_plugins do
   # A Jekyll plugin to add metadata tags for search engines and social networks
   # to better index and display your site's content.
   # NOTE: SEO => Search Engine Optimization
-  gem 'jekyll-seo-tag', '~> 2.6.1'
+  gem 'jekyll-seo-tag', '~> 2.8.0'
 end
 
 # WDM - Windows Directory Manager
@@ -99,7 +99,7 @@ group :development do
   # A simple, easy-to-extend, drop-in replacement for the pygments syntax
   # highlighter.
   # NOTE: Only required for development.
-  gem 'rouge', '~> 3.19.0'
+  gem 'rouge', '~> 3.26.0'
 end
 
 # Minima
@@ -113,10 +113,10 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
   # TZInfo
   # TZInfo provides access to time zone data and allows times to be converted
   # using time zone rules.
-  gem 'tzinfo', '~> 2.0.2'
+  gem 'tzinfo', '~> 2.0.6'
 
   # TZInfo::Data
   # TZInfo::Data contains data from the IANA Time Zone database packaged as
   # Ruby modules for use with TZInfo.
-  gem 'tzinfo-data', '~> 1.2020.1', :platforms => [:mingw, :mswin]
+  gem 'tzinfo-data', '~> 1.2023.4', :platforms => [:mingw, :mswin]
 end
