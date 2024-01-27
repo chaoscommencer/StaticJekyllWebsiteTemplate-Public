@@ -27,7 +27,7 @@ source 'https://rubygems.org'
 # WARNING: Specifying the patchlevel has been meaningless since Ruby 2.1.0 was
 # released as the patchlevel is now uniquely determined by a combination of
 # major, minor, and teeny version numbers.
-ruby '3.2.0'
+ruby '3.3.0'
 
 # Groups exist for test, development, production...
 # group :development do
@@ -44,17 +44,17 @@ group :production do
   # github-pages
   # Bootstrap the GitHub Pages Jekyll environment locally.  If you want to use
   # GitHub Pages, remove the "gem 'jekyll'" above and uncomment the line below.
-  # To upgrade, run `bundle update github-pages`.  Up to version 222.
+  # To upgrade, run `bundle update github-pages`.  Up to version 228.
   # gem 'multipart-post', '~> 2.1', '>= 2.1.1'
   # gem 'sassc', '~> 2.3'
-  gem 'github-pages', '~> 222', group: :jekyll_plugins #, :platforms => :x64_mingw32
+  gem 'github-pages', '~> 228', group: :jekyll_plugins #, :platforms => :x64_mingw32
 end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   # jekyll-commonmark-ghpages
   # A CommonMark generator for Jekyll
-  gem 'jekyll-commonmark-ghpages', '~> 0.1.6'
+  gem 'jekyll-commonmark-ghpages', '~> 0.4.0'
 
   # jekyll-feed
   # A Jekyll plugin to generate an Atom feed of your Jekyll posts.
@@ -88,7 +88,7 @@ group :jekyll_plugins do
   # A Jekyll plugin to add metadata tags for search engines and social networks
   # to better index and display your site's content.
   # NOTE: SEO => Search Engine Optimization
-  gem 'jekyll-seo-tag', '~> 2.7.1'
+  gem 'jekyll-seo-tag', '~> 2.8.0'
 end
 
 # WDM - Windows Directory Manager
@@ -118,10 +118,10 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
   # TZInfo
   # TZInfo provides access to time zone data and allows times to be converted
   # using time zone rules.
-  gem 'tzinfo', '~> 2.0.2'
+  gem 'tzinfo', '~> 2.0.6'
 
   # TZInfo::Data
   # TZInfo::Data contains data from the IANA Time Zone database packaged as
   # Ruby modules for use with TZInfo.
-  gem 'tzinfo-data', '~> 1.2020.1', :platforms => [:mingw, :mswin]
+  gem 'tzinfo-data', '~> 1.2023.4', :platforms => [:mingw, :mswin]
 end
