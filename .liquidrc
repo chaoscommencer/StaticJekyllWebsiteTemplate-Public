@@ -1,4 +1,10 @@
 {
+  // Configuration file for [Liquid extension](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid)
+  // Supports Liquid syntax in CSS, SCSS, JS, MD, etc.
+  // Features include:
+  // - Syntax highlighting
+  // - Auto-completion
+  // - More
   "ignore": [
     {
       "type": "liquid",
