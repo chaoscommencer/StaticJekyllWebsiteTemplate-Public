@@ -135,7 +135,8 @@ plugins:
 # Exclude
 # Extension of the internal default list of files and/or directories to be
 # excluded from processing.  Entries in this list will not end up in the
-# 'destination' ('Build') directory.
+# 'destination' ('Build') directory.  Path exclusions are performed relative
+# to the 'source' ('Source') directory.
 #
 # NOTE: An excluded item may be explicitly processed by listing the
 # corresponding path in the list defined by the `include` key.
@@ -160,7 +161,8 @@ exclude:
   - temporary/
 
 # Include
-# Include files and/or directories in the conversion.
+# Include files and/or directories in the conversion.  Path inclusions are
+# performed relative to the 'source' ('Source') directory.
 # NOTE: Dot-prefixed files are excluded by default.
 #
 # include: [".htaccess"]
@@ -168,7 +170,7 @@ include: []
 
 # Markdown File Extensions
 # Extensions of files that will be treated as Markdown for processing.
-markdown_ext: "md,mkd,mkdn,mkdown,markdown"
+markdown_ext: md,mkd,mkdn,mkdown,markdown
 
 # Drafts
 # Whether or not to process and render draft posts.
@@ -301,6 +303,9 @@ compress_html:
 # Define groups of related content.  Each collection has its own subdirectory
 # under the collections directory that is named by the collection's name
 # prefixed with an underscore.
+# NOTE: To customize definition of 'collections' on a per-project basis, use a
+# grunt build task to first perform token replacement in _config.yml prior to
+# calling jekyll build.
 collections:
   posts:
     output: true # Render posts collection by default
@@ -320,13 +325,6 @@ defaults:
       image: true
   -
     scope:
-      path: collections/_posts
-      type: posts
-    values:
-      layout: post
-      published: true
-  -
-    scope:
       path: pages
       type: pages
     values:
@@ -334,16 +332,75 @@ defaults:
       published: true
       # WARNING: The permalink variable doesn't work for pages when defined
       # here.
+  -
+    scope:
+      path: collections/_posts
+      type: posts
+    values:
+      layout: post
+      published: true
+  # -
+  #   scope:
+  #     path: MD/about.md
+  #   values:
+  #     layout: page
+  #     published: true
+  #     # permalink: /:name/
+  # # -
+  # #   scope:
+  # #     path: 'Source/MD/index.markdown'
+  # #     type: 'other'
+  # #   values:
+  # #     layout: 'home'
+  # #     permalink: '/hihoware/you'
+  # #     published: true
+  # -
+  #   scope:
+  #     path: Source/MD
+  #     type: pages
+  #   values:
+  #     layout: page
+  #     permalink: /:title/
+  #     published: true
+  # -
+  #   scope:
+  #     path: Source/HTML
+  #     type: pages
+  #   values:
+  #     layout: page
+  #     permalink: /:title/
+  #     published: true
+  # -
+  #   scope:
+  #     path: Source/MD
+  #     type: posts
+  #   values:
+  #     layout: post
+  #     published: true
+  #     # title: '...'
+  # -
+  #   scope:
+  #     path: Source/HTML
+  #     type: posts
+  #   values:
+  #     layout: post
+  #     published: true
+  #     # title: '...'
 
 # Encoding
 # The encoding of files.
-# WARNING: UTF-8 encoding might break Windows!!!
-# encoding: utf-8
+# WARNING: Using UTF-8 encoding might break Jekyll processing, particularly on
+# Windows!
+# NOTE: If the error 'Liquid Exception: Incompatible character encoding' is
+# generated during site creation, run the following command from the initiating
+# terminal:
+# chcp 65001
+encoding: utf-8
 
 # Excerpt Separator
 # When generating excerpt definitions for posts, the excerpt separator is used
 # to determine whether the excerpt terminates.
-excerpt_separator: "\n\n"
+excerpt_separator: \n\n
 
 # LSI
 # Whether or not to produce an index for related posts.
@@ -392,12 +449,13 @@ port: 8080
 # URL
 # The base hostname & protocol for your site, e.g. http://example.com
 # TODO: Determine the difference between function of url and host variables...
-# url: ''
+# url: 'https://www.mysite.com'
 
 # Local Server Hostname
 # Listen at the given hostname.
 # host: 127.0.0.1
-# host: 'https://reference.github.io/'
+# host: 'localhost'
+# host: 'https://reference.github.io'
 
 # Base URL
 # Serve the website from the given base URL.
@@ -405,6 +463,7 @@ port: 8080
 # site.url + site.baseurl + relative_url
 # As such, the host name should not be included in baseurl.
 # baseurl: ''
+# baseurl: '/mybase'
 
 # Live Reload
 # Reload a page automatically on the browser when its content is edited.
