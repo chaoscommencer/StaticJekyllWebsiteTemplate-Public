@@ -2,16 +2,33 @@
 #-------------------------------
 # General Site Settings
 # These are used to personalize the site. They can be accessed from HTML files
-# via {{ site.title }}, {{ site.email }}, etc.
+# via {{ site.data.settings.title }}, {{ site.data.settings.email }}, etc.
 # Any custom variable can be created here, and it will be accessible in the
-# templates via {{ site.myvariable }}.
+# templates via {{ site.data.settings.myvariable }}.
 
 # Edit the following fields as appropriate.
 title: StaticJekyllWebsiteTemplate-Public
 description: A publicly available template starting point for building Jekyll-based static websites.
-email: username@gmail.com
+author: jekyll User
+email: jekyll@gmail.com
 twitter_username: username
 github_username:  username
+rss: rss
+# dribbble_username: jekyll
+facebook_username: jekyll
+# flickr_username: jekyll
+# instagram_username: jekyll
+# linkedin_username: jekyll
+# pinterest_username: jekyll
+# youtube_username: jekyll
+# googleplus_username: +jekyll
+
+# Mastodon instances
+# mastodon:
+# - username: jekyll
+#   instance: example.com
+# - username: jekyll2
+#   instance: example.com
 #-------------------------------
 
 #-------------------------------
