@@ -1,0 +1,35 @@
+name: Author Name
+email: username@gmail.com
+
+# social links
+social:
+    # - type: dribbble
+    #   username: username
+    # - type: facebook
+    #   username: username
+    # - type: flickr
+    #   username: username
+    - type: github
+      username:  username
+    # - type: instagram
+    #   username: username
+    # - type: linkedin
+    #   username: username
+    # - type:  pinterest
+    #   username: username
+    # Mastodon instances
+    # - type: mastodon
+    #   username: username
+    #   instance: example.com
+    # - type: mastodon
+    #   username: username2
+    #   instance: example.com
+    - type: twitter
+      username: username
+    # - type: youtube
+    #   username: username
+    # - type: googleplus
+    #   username: +username
+    # - type: rss
+    #   display_name: rss
+    #   feed: /feed.xml
