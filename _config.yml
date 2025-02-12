@@ -18,49 +18,49 @@
 
 # Site Source
 # Change the directory where Jekyll will read files.
-source: Source
+source: source
 
 # Site Destination
 # Change the directory where Jekyll will write files.
-destination: Build
+destination: build
 
 # Jekyll Cache Directory
 # Change the directory where Jekyll will cache files.
 # WARNING: In order for cache_dir to be respected and for a cache directory to
 # actually be generated, `safe` and `disable_disk_cache` must each be false.
-cache_dir: Temporary/.jekyll-cache
+cache_dir: temporary/.jekyll-cache
 
 # Collections Directory
 # Specify the location of the collections directory (relative to the directory
 # defined by the 'source' variable).  The _drafts and _posts directories are
 # subdirectories of the collections directory.
-collections_dir: Collections
+collections_dir: collections
 
 # Data Directory
 # Change the directory where Jekyll will read additional configuration data
 # files (relative to `source`).
-data_dir: Data
+data_dir: data
 
 # Includes Directory
 # Change the directory where Jekyll will read include files (relative to
 # `source`).
-includes_dir: Includes
+includes_dir: includes
 
 # Layouts Directory
 # Change the directory where Jekyll will read layout files (relative to
 # `source`).
-layouts_dir: Layouts
+layouts_dir: layouts
 
 # Plugins Directory
 # Change the directory where Jekyll will read plugins files (relative to
 # `source`).
-plugins_dir: Plugins
+plugins_dir: plugins
 
 # SASS-specific configuration.
 sass:
   # SASS Directory
   # Change the directory where Jekyll will read SASS files.
-  sass_dir: CSS
+  sass_dir: css
   # Style
   # Change the output format for the generated CSS files.
   style: :compressed
@@ -131,11 +131,11 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 exclude:
-  - Data/
-  - Includes/
-  - Layouts/
-  - Plugins/
-  - Temporary/
+  - data/
+  - includes/
+  - layouts/
+  - plugins/
+  - temporary/
 
 # Include
 # Include files and/or directories in the conversion.
@@ -288,24 +288,24 @@ collections:
 defaults:
   -
     scope:
-      path: Assets/Fonts
+      path: assets/fonts
     values:
       font: true
   -
     scope:
-      path: Assets/Images
+      path: assets/images
     values:
       image: true
   -
     scope:
-      path: Collections/_posts
+      path: collections/_posts
       type: posts
     values:
       layout: post
       published: true
   -
     scope:
-      path: Pages
+      path: pages
       type: pages
     values:
       layout: page
