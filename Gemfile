@@ -22,7 +22,12 @@
 source 'https://rubygems.org'
 
 # Enforce minimum required Ruby version and patch level.
-ruby '3.3.0', :patchlevel => '0'
+# NOTE: Each application may specify a Ruby patchlevel. This option was
+# implemented in Bundler 1.4.0 for Ruby 2.0 or earlier.
+# WARNING: Specifying the patchlevel has been meaningless since Ruby 2.1.0 was
+# released as the patchlevel is now uniquely determined by a combination of
+# major, minor, and teeny version numbers.
+ruby '3.4.1'
 
 # Groups exist for test, development, production...
 # group :development do
@@ -30,30 +35,33 @@ ruby '3.3.0', :patchlevel => '0'
 #   # A simple, blog-aware, static-site generator.
 #   # Mandate the version of Jekyll to be run.  Run Jekyll as follows:
 #   # bundle exec jekyll serve
-#   gem 'jekyll', '~> 4.0.1'
+#   gem 'jekyll', '~> 4.4.1'
 # end
-gem 'jekyll', '~> 3.9.0'
+gem 'jekyll', '~> 4.4.1'
 
 # Groups exist for test, development, production...
 group :production do
     # github-pages
     # Bootstrap the GitHub Pages Jekyll environment locally.  If you want to use
     # GitHub Pages, remove the "gem 'jekyll'" above and uncomment the line below.
-    # To upgrade, run `bundle update github-pages`.  Up to version 204.
-#     gem 'multipart-post', '~> 2.1', '>= 2.1.1'
-#     gem 'sassc', '~> 2.3'
-    gem 'github-pages', '~> 228', group: :jekyll_plugins #, :platforms => :x64_mingw32
+    # To upgrade, run `bundle update github-pages`.  Up to version 232.
+    # gem 'multipart-post', '~> 2.1', '>= 2.1.1'
+    # gem 'sassc', '~> 2.3'
+    # WARNING: The GitHub Pages plugin does not support newer versions of Jekyll
+    # gem 'github-pages', '~> 232', group: :jekyll_plugins #, :platforms => :x64_mingw32
 end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   # jekyll-commonmark-ghpages
   # A CommonMark generator for Jekyll
-  gem 'jekyll-commonmark-ghpages', '~> 0.4.0'
+  # gem 'jekyll-commonmark-ghpages', '~> 0.5.1'
+  gem 'kramdown', '~> 2.5.1'
+  # gem 'kramdown-parser-gfm', '~> 1.1.0'
 
   # jekyll-feed
   # A Jekyll plugin to generate an Atom feed of your Jekyll posts.
-  gem 'jekyll-feed', '~> 0.15.1'
+  gem 'jekyll-feed', '~> 0.17.0'
 
   # jekyll-livereload
   # The Jekyll LiveReload plugin adds additional command line options to the
@@ -91,7 +99,7 @@ end
 # monitors directories for changes leverages the Win32 API for enhanced
 # performance.
 # NOTE: [Required to?] support Jekyll's watch functionality.
-gem 'wdm', '~> 0.1.1' if Gem.win_platform?
+gem 'wdm', '~> 0.2.0' if Gem.win_platform?
 
 # Groups exist for test, development, production...
 group :development do
@@ -99,13 +107,17 @@ group :development do
   # A simple, easy-to-extend, drop-in replacement for the pygments syntax
   # highlighter.
   # NOTE: Only required for development.
-  gem 'rouge', '~> 3.26.0'
+  gem 'rouge', '~> 4.5.1'
 end
 
 # Minima
 # A beautiful minimal theme for Jekyll.  This is the default theme for new
 # Jekyll sites. You may change this to anything you like.
-gem 'minima', '~> 2.5.1'
+# gem 'minima', '~> 2.5.2'
+
+# Jekyll Remote Theme
+# Jekyll plugin for building Jekyll sites with any GitHub-hosted theme
+gem 'jekyll-remote-theme', '~> 0.4.3'
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data
 # gem and associated library.
@@ -118,5 +130,11 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
   # TZInfo::Data
   # TZInfo::Data contains data from the IANA Time Zone database packaged as
   # Ruby modules for use with TZInfo.
-  gem 'tzinfo-data', '~> 1.2023.4', :platforms => [:mingw, :mswin]
+  gem 'tzinfo-data', '~> 1.2025.1', :platforms => [:mingw, :mswin]
 end
+
+# Include logger (no-longer included by default from Ruby 3.5.0 onward).
+# WARNING: logger was loaded from the standard library, but will no longer be
+# part of the default gems starting from Ruby 3.5.0.
+# You can add logger to your Gemfile or gemspec to silence this warning.
+gem 'logger', '~> 1.6', '>= 1.6.5'
