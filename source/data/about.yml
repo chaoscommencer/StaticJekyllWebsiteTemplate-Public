@@ -1,0 +1,14 @@
+title: StaticJekyllWebsiteTemplate-Public
+description: > # this means to ignore newlines until "rss:"
+  A publicly available template starting point for building Jekyll-based static
+  websites.
+
+# Site RSS Feed
+rss: rss
+
+# Post Comments (powered by Disqus)
+# disqus:
+#   shortname: my_disqus_shortname
+
+# Google Analytics
+# google_analytics: UA-NNNNNNNN-N

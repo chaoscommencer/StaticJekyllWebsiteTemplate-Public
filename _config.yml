@@ -102,6 +102,7 @@ whitelist: []
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
 
 # Plugins
 #--------
@@ -190,7 +191,8 @@ markdown: kramdown
 
 # Theme
 # The theme to be used during site generation.
-theme: minima
+# theme: minima
+remote_theme: chaoscommencer/minima@b6dccad # 119c5c372e2e9df92cfe454287b664b29
 
 # Compilers
 #----------
