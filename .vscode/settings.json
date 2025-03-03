@@ -1,5 +1,6 @@
 {
     "browser-preview.startUrl": "http://localhost:8080/",
+    "cSpell.language": "en-US",
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
     "files.encoding": "utf8",
