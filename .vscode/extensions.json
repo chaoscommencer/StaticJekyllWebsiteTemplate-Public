@@ -1,24 +1,21 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=827846
+    // See https://code.visualstudio.com/docs/editor/extension-marketplace#_workspace-recommended-extensions
     // for the documentation about the extensions.json format
     "recommendations": [
         "aaron-bond.better-comments",
         // "alefragnani.project-manager",
-        "auchenberg.vscode-browser-preview",
+        "Chouzz.vscode-better-align",
         // "christian-kohler.npm-intellisense",
         "christian-kohler.path-intellisense",
-        "CoenraadS.bracket-pair-colorizer-2",
         "DavidAnson.vscode-markdownlint",
         "dbaeumer.vscode-eslint",
         "eamodio.gitlens",
-        // "eg2.vscode-npm-script",
         "formulahendry.auto-rename-tag",
         "mrmlnc.vscode-scss",
+        "ms-vscode.live-server",
         "psioniq.psi-header",
         "sissel.shopify-liquid",
-        "Tyriar.shell-launcher",
         "WallabyJs.quokka-vscode",
-        "wwm.better-align",
-        "yzhang.markdown-all-in-one",
+        "yzhang.markdown-all-in-one"
     ]
 }
