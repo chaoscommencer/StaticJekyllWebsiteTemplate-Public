@@ -13,6 +13,15 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 
+title: StaticJekyllWebsiteTemplate-Public
+description: > # this means to ignore newlines until "rss:"
+    A publicly available template starting point for building Jekyll-based
+    static websites.
+
+# Language Code
+# lang: en
+
+
 #--------------------
 # Directory Structure
 
@@ -216,7 +225,7 @@ markdown: kramdown
 # Theme
 # The theme to be used during site generation.
 # theme: minima
-remote_theme: chaoscommencer/minima@b6dccad # 119c5c372e2e9df92cfe454287b664b29
+remote_theme: chaoscommencer/minima@7d9e3c4 # e81f98fa416f9b2e7bca29d8396d120de
 
 # Compilers
 #----------
