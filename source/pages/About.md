@@ -4,7 +4,11 @@ title: About
 permalink: /:basename/
 ---
 
-{{ site.data.author.name }}
+{%- for author in site.data.authors -%}
+{%- if author[1].name -%}
+{{ author[1].name | escape }}  
+{%- endif -%}
+{%- endfor -%}
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
