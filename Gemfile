@@ -127,6 +127,12 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
     gem 'tzinfo-data', '~> 1.2023.4', :platforms => [:mingw, :mswin]
 end
 
+# Include csv (no-longer included by default from Ruby 3.4.0 onward).
+# WARNING: csv was loaded from the standard library, but will no longer be part
+# of the default gems starting from Ruby 3.4.0.
+# You can add csv to your Gemfile or gemspec to silence this warning.
+gem 'csv', '~> 3.3', '>= 3.3.2'
+
 # Include logger (no-longer included by default from Ruby 3.5.0 onward).
 # WARNING: logger was loaded from the standard library, but will no longer be
 # part of the default gems starting from Ruby 3.5.0.
