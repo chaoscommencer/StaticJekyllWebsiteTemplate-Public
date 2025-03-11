@@ -138,3 +138,9 @@ gem 'csv', '~> 3.3', '>= 3.3.2'
 # part of the default gems starting from Ruby 3.5.0.
 # You can add logger to your Gemfile or gemspec to silence this warning.
 gem 'logger', '~> 1.6', '>= 1.6.6'
+
+# Include webrick (no-longer included by default from Ruby 3.0.0 onward).
+# WARNING: webrick was loaded from the standard library, but is not part of the
+# default gems since Ruby 3.0.0.
+# You can add webrick to your Gemfile or gemspec to resolve this error.
+gem 'webrick', '~> 1.9', '>= 1.9.1'
