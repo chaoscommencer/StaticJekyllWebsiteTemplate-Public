@@ -22,7 +22,7 @@
 source 'https://rubygems.org'
 
 # Enforce minimum required Ruby version and patch level.
-ruby '3.3.0', :patchlevel => '0'
+ruby '3.4.1'
 
 # Groups exist for test, development, production...
 # group :development do
@@ -120,3 +120,7 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
   # Ruby modules for use with TZInfo.
   gem 'tzinfo-data', '~> 1.2023.4', :platforms => [:mingw, :mswin]
 end
+
+gem 'csv', '~> 3.3', '>= 3.3.2'
+gem 'logger', '~> 1.6', '>= 1.6.6'
+gem 'webrick', '~> 1.9', '>= 1.9.1'

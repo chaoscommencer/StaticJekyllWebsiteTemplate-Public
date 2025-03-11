@@ -23,6 +23,7 @@ GEM
     commonmarker (0.23.10)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
+    csv (3.3.2)
     dnsruby (1.70.0)
       simpleidn (~> 0.2.1)
     drb (2.2.0)
@@ -214,6 +215,7 @@ GEM
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.6.6)
     mercenary (0.3.6)
     mini_portile2 (2.8.8)
     minima (2.5.1)
@@ -273,6 +275,7 @@ GEM
     unf_ext (0.0.9.1)
     unicode-display_width (1.8.0)
     uri (0.13.2)
+    webrick (1.9.1)
 
 PLATFORMS
   aarch64-linux
@@ -283,18 +286,21 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  csv
   github-pages (~> 228)
   jekyll (~> 3.9.0)
   jekyll-commonmark-ghpages (~> 0.4.0)
   jekyll-feed (~> 0.15.1)
   jekyll-seo-tag (~> 2.8.0)
+  logger
   minima (~> 2.5.1)
   rouge (~> 3.26.0)
   tzinfo (~> 2.0.6)
   tzinfo-data (~> 1.2023.4)
+  webrick
 
 RUBY VERSION
-   ruby 3.3.0p0
+   ruby 3.4.1p0
 
 BUNDLED WITH
    2.5.5
