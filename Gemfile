@@ -121,4 +121,5 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
   gem 'tzinfo-data', '~> 1.2023.4', :platforms => [:mingw, :mswin]
 end
 
+gem 'csv', '~> 3.3', '>= 3.3.2'
 gem 'logger', '~> 1.6', '>= 1.6.6'
