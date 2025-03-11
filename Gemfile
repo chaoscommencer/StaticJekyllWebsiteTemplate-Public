@@ -125,3 +125,9 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
   # Ruby modules for use with TZInfo.
   gem 'tzinfo-data', '~> 1.2023.4', :platforms => [:mingw, :mswin]
 end
+
+# Include logger (no-longer included by default from Ruby 3.5.0 onward).
+# WARNING: logger was loaded from the standard library, but will no longer be
+# part of the default gems starting from Ruby 3.5.0.
+# You can add logger to your Gemfile or gemspec to silence this warning.
+gem 'logger', '~> 1.6', '>= 1.6.6'
