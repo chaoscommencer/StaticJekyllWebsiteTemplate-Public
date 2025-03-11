@@ -275,6 +275,7 @@ GEM
     unf_ext (0.0.9.1)
     unicode-display_width (1.8.0)
     uri (0.13.2)
+    webrick (1.9.1)
 
 PLATFORMS
   aarch64-linux
@@ -296,6 +297,7 @@ DEPENDENCIES
   rouge (~> 3.26.0)
   tzinfo (~> 2.0.6)
   tzinfo-data (~> 1.2023.4)
+  webrick (~> 1.9, >= 1.9.1)
 
 RUBY VERSION
    ruby 3.3.0p0
