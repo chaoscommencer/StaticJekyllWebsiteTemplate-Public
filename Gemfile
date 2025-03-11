@@ -120,3 +120,5 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
   # Ruby modules for use with TZInfo.
   gem 'tzinfo-data', '~> 1.2023.4', :platforms => [:mingw, :mswin]
 end
+
+gem 'logger', '~> 1.6', '>= 1.6.6'
