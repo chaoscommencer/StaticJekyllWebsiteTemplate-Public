@@ -35,9 +35,9 @@ ruby '3.3.4'
 #     # A simple, blog-aware, static-site generator.
 #     # Mandate the version of Jekyll to be run.  Run Jekyll as follows:
 #     # bundle exec jekyll serve
-#     gem 'jekyll', '~> 3.9.0'
+#     gem 'jekyll', '~> 3.10.0'
 # end
-gem 'jekyll', '~> 3.9.0'
+gem 'jekyll', '~> 3.10.0'
 
 # Groups exist for test, development, production...
 group :production do
@@ -45,21 +45,21 @@ group :production do
     # Bootstrap the GitHub Pages Jekyll environment locally.  If you want to use
     # GitHub Pages, remove the "gem 'jekyll'" above and uncomment the line
     # below.
-    # To upgrade, run `bundle update github-pages`.  Up to version 228.
+    # To upgrade, run `bundle update github-pages`.  Up to version 232.
     # gem 'multipart-post', '~> 2.1', '>= 2.1.1'
     # gem 'sassc', '~> 2.3'
-    gem 'github-pages', '~> 228', group: :jekyll_plugins #, :platforms => :x64_mingw32
+    gem 'github-pages', '~> 232', group: :jekyll_plugins #, :platforms => :x64_mingw32
 end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
     # jekyll-commonmark-ghpages
     # A CommonMark generator for Jekyll
-    gem 'jekyll-commonmark-ghpages', '~> 0.4.0'
+    gem 'jekyll-commonmark-ghpages', '~> 0.5.1'
 
     # jekyll-feed
     # A Jekyll plugin to generate an Atom feed of your Jekyll posts.
-    gem 'jekyll-feed', '~> 0.15.1'
+    gem 'jekyll-feed', '~> 0.17.0'
 
     # jekyll-livereload
     # The Jekyll LiveReload plugin adds additional command line options to the
@@ -97,7 +97,7 @@ end
 # monitors directories for changes leverages the Win32 API for enhanced
 # performance.
 # NOTE: [Required to?] support Jekyll's watch functionality.
-gem 'wdm', '~> 0.1.1' if Gem.win_platform?
+gem 'wdm', '~> 0.2.0' if Gem.win_platform?
 
 # Groups exist for test, development, production...
 group :development do
@@ -105,7 +105,7 @@ group :development do
     # A simple, easy-to-extend, drop-in replacement for the pygments syntax
     # highlighter.
     # NOTE: Only required for development.
-    gem 'rouge', '~> 3.26.0'
+    gem 'rouge', '~> 3.30.0'
 end
 
 # Minima
@@ -124,23 +124,5 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
     # TZInfo::Data
     # TZInfo::Data contains data from the IANA Time Zone database packaged as
     # Ruby modules for use with TZInfo.
-    gem 'tzinfo-data', '~> 1.2023.4', :platforms => [:mingw, :mswin]
+    gem 'tzinfo-data', '~> 1.2025', '>= 1.2025.1', :platforms => [:mingw, :mswin]
 end
-
-# Include csv (no-longer included by default from Ruby 3.4.0 onward).
-# WARNING: csv was loaded from the standard library, but will no longer be part
-# of the default gems starting from Ruby 3.4.0.
-# You can add csv to your Gemfile or gemspec to silence this warning.
-gem 'csv', '~> 3.3', '>= 3.3.2'
-
-# Include logger (no-longer included by default from Ruby 3.5.0 onward).
-# WARNING: logger was loaded from the standard library, but will no longer be
-# part of the default gems starting from Ruby 3.5.0.
-# You can add logger to your Gemfile or gemspec to silence this warning.
-gem 'logger', '~> 1.6', '>= 1.6.6'
-
-# Include webrick (no-longer included by default from Ruby 3.0.0 onward).
-# WARNING: webrick was loaded from the standard library, but is not part of the
-# default gems since Ruby 3.0.0.
-# You can add webrick to your Gemfile or gemspec to resolve this error.
-gem 'webrick', '~> 1.9', '>= 1.9.1'
