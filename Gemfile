@@ -32,7 +32,7 @@ ruby '3.3.4'
 #   # bundle exec jekyll serve
 #   gem 'jekyll', '~> 4.0.1'
 # end
-gem 'jekyll', '~> 3.9.0'
+gem 'jekyll', '~> 3.10.0'
 
 # Groups exist for test, development, production...
 group :production do
@@ -42,18 +42,18 @@ group :production do
     # To upgrade, run `bundle update github-pages`.  Up to version 204.
 #     gem 'multipart-post', '~> 2.1', '>= 2.1.1'
 #     gem 'sassc', '~> 2.3'
-    gem 'github-pages', '~> 228', group: :jekyll_plugins #, :platforms => :x64_mingw32
+    gem 'github-pages', '~> 232', group: :jekyll_plugins #, :platforms => :x64_mingw32
 end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   # jekyll-commonmark-ghpages
   # A CommonMark generator for Jekyll
-  gem 'jekyll-commonmark-ghpages', '~> 0.4.0'
+  gem 'jekyll-commonmark-ghpages', '~> 0.5.1'
 
   # jekyll-feed
   # A Jekyll plugin to generate an Atom feed of your Jekyll posts.
-  gem 'jekyll-feed', '~> 0.15.1'
+  gem 'jekyll-feed', '~> 0.17.0'
 
   # jekyll-livereload
   # The Jekyll LiveReload plugin adds additional command line options to the
@@ -91,7 +91,7 @@ end
 # monitors directories for changes leverages the Win32 API for enhanced
 # performance.
 # NOTE: [Required to?] support Jekyll's watch functionality.
-gem 'wdm', '~> 0.1.1' if Gem.win_platform?
+gem 'wdm', '~> 0.2.0' if Gem.win_platform?
 
 # Groups exist for test, development, production...
 group :development do
@@ -99,7 +99,7 @@ group :development do
   # A simple, easy-to-extend, drop-in replacement for the pygments syntax
   # highlighter.
   # NOTE: Only required for development.
-  gem 'rouge', '~> 3.26.0'
+  gem 'rouge', '~> 3.30.0'
 end
 
 # Minima
@@ -118,9 +118,5 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
   # TZInfo::Data
   # TZInfo::Data contains data from the IANA Time Zone database packaged as
   # Ruby modules for use with TZInfo.
-  gem 'tzinfo-data', '~> 1.2023.4', :platforms => [:mingw, :mswin]
+  gem 'tzinfo-data', '~> 1.2025', '>= 1.2025.1', :platforms => [:mingw, :mswin]
 end
-
-gem 'csv', '~> 3.3', '>= 3.3.2'
-gem 'logger', '~> 1.6', '>= 1.6.6'
-gem 'webrick', '~> 1.9', '>= 1.9.1'
