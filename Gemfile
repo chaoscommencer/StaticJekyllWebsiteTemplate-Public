@@ -22,7 +22,7 @@
 source 'https://rubygems.org'
 
 # Enforce minimum required Ruby version and patch level.
-ruby '3.4.1'
+ruby '3.3.4'
 
 # Groups exist for test, development, production...
 # group :development do
