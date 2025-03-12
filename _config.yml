@@ -60,7 +60,7 @@ plugins_dir: Plugins
 sass:
   # SASS Directory
   # Change the directory where Jekyll will read SASS files.
-  sass_dir: CSS
+  sass_dir: Source/CSS
   # Style
   # Change the output format for the generated CSS files.
   style: :compressed
