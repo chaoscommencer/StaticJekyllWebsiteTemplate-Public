@@ -22,7 +22,12 @@
 source 'https://rubygems.org'
 
 # Enforce minimum required Ruby version and patch level.
-ruby '3.2.0', :patchlevel => '83'
+# NOTE: Each application may specify a Ruby patchlevel. This option was
+# implemented in Bundler 1.4.0 for Ruby 2.0 or earlier.
+# WARNING: Specifying the patchlevel has been meaningless since Ruby 2.1.0 was
+# released as the patchlevel is now uniquely determined by a combination of
+# major, minor, and teeny version numbers.
+ruby '3.2.0'
 
 # Groups exist for test, development, production...
 # group :development do
@@ -30,9 +35,9 @@ ruby '3.2.0', :patchlevel => '83'
 #   # A simple, blog-aware, static-site generator.
 #   # Mandate the version of Jekyll to be run.  Run Jekyll as follows:
 #   # bundle exec jekyll serve
-#   gem 'jekyll', '~> 4.0.1'
+#   gem 'jekyll', '~> 3.9.0'
 # end
-gem 'jekyll', '~> 4.0.1'
+gem 'jekyll', '~> 3.9.0'
 
 # Groups exist for test, development, production...
 group :production do
@@ -53,7 +58,7 @@ group :jekyll_plugins do
 
   # jekyll-feed
   # A Jekyll plugin to generate an Atom feed of your Jekyll posts.
-  gem 'jekyll-feed', '~> 0.13.0'
+  gem 'jekyll-feed', '~> 0.15.1'
 
   # jekyll-livereload
   # The Jekyll LiveReload plugin adds additional command line options to the
@@ -83,7 +88,7 @@ group :jekyll_plugins do
   # A Jekyll plugin to add metadata tags for search engines and social networks
   # to better index and display your site's content.
   # NOTE: SEO => Search Engine Optimization
-  gem 'jekyll-seo-tag', '~> 2.6.1'
+  gem 'jekyll-seo-tag', '~> 2.7.1'
 end
 
 # WDM - Windows Directory Manager
@@ -99,7 +104,7 @@ group :development do
   # A simple, easy-to-extend, drop-in replacement for the pygments syntax
   # highlighter.
   # NOTE: Only required for development.
-  gem 'rouge', '~> 3.19.0'
+  gem 'rouge', '~> 3.26.0'
 end
 
 # Minima
