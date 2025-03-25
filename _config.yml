@@ -207,8 +207,10 @@ highlighter: rouge
 # WARNING: Use of custom [Markdown] processors is prohibited in safe mode and
 # will cause the build to fail.  When in safe mode, use built-in kramdown
 # Markdown processor instead.
-markdown: CommonMarkGhPages # Leverages CommonMark
-# markdown: kramdown
+# WARNING: jekyll-commonmark-ghpages >= 0.5.1 depends on jekyll >= 3.9, < 4.0
+# and is not supported by modern versions of Jekyll (> 4.0)
+# markdown: CommonMarkGhPages # Leverages CommonMark
+markdown: kramdown
 
 # Theme
 # The theme to be used during site generation.
