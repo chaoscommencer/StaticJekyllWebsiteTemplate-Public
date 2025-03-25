@@ -27,7 +27,7 @@ source 'https://rubygems.org'
 # WARNING: Specifying the patchlevel has been meaningless since Ruby 2.1.0 was
 # released as the patchlevel is now uniquely determined by a combination of
 # major, minor, and teeny version numbers.
-ruby '3.3.4'
+ruby '3.4.2'
 
 # Groups exist for test, development, production...
 # group :development do
