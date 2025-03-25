@@ -73,7 +73,7 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     rexml (3.4.1)
-    rouge (3.30.0)
+    rouge (4.5.1)
     safe_yaml (1.0.5)
     sass-embedded (1.86.0)
       google-protobuf (~> 4.30)
@@ -109,7 +109,7 @@ DEPENDENCIES
   jekyll-seo-tag (~> 2.8.0)
   kramdown (~> 2.5.1)
   minima (~> 2.5.1)
-  rouge (~> 3.30.0)
+  rouge (~> 4.5, >= 4.5.1)
   tzinfo (~> 2.0.6)
   tzinfo-data (~> 1.2025, >= 1.2025.1)
 
