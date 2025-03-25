@@ -58,12 +58,12 @@ plugins_dir: plugins
 
 # SASS-specific configuration.
 sass:
-  # SASS Directory
-  # Change the directory where Jekyll will read SASS files.
-  sass_dir: css
-  # Style
-  # Change the output format for the generated CSS files.
-  style: :compressed
+    # SASS Directory
+    # Change the directory where Jekyll will read SASS files.
+    sass_dir: css
+    # Style
+    # Change the output format for the generated CSS files.
+    style: :compressed
 
 # Permalink
 # Defines the default URL format for pages, posts, and collections.  Supports
@@ -100,8 +100,8 @@ whitelist: []
 # Plugins
 # The plugins to be run with the site.
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+    - jekyll-feed
+    - jekyll-seo-tag
 
 # Plugins
 #--------
@@ -121,22 +121,22 @@ plugins:
 # WARNING: Dot-prefixed files and directories are excluded by default.
 #
 # exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+#     - .sass-cache/
+#     - .jekyll-cache/
+#     - gemfiles/
+#     - Gemfile
+#     - Gemfile.lock
+#     - node_modules/
+#     - vendor/bundle/
+#     - vendor/cache/
+#     - vendor/gems/
+#     - vendor/ruby/
 exclude:
-  - data/
-  - includes/
-  - layouts/
-  - plugins/
-  - temporary/
+    - data/
+    - includes/
+    - layouts/
+    - plugins/
+    - temporary/
 
 # Include
 # Include files and/or directories in the conversion.  Path inclusions are
@@ -220,9 +220,9 @@ keep_files: []
 incremental: false
 
 liquid:
-  error_mode        : warn
-  strict_filters    : false
-  strict_variables  : false
+    error_mode        : warn
+    strict_filters    : false
+    strict_variables  : false
 
 # Strict Front Matter
 # Whether or not to fail a build when there are YAML syntax errors in a page's
@@ -240,35 +240,35 @@ strict_front_matter: true
 # A strongly defined, highly compatible specification of Markdown, CommonMark
 # is the current markdown processor used by Visual Studio Code.
 commonmark:
-  options: ['SMART', 'FOOTNOTES']
-  extensions: ['strikethrough', 'autolink', 'table', 'tagfilter']
+    options: ['SMART', 'FOOTNOTES']
+    extensions: ['strikethrough', 'autolink', 'table', 'tagfilter']
 
 kramdown:
-  auto_ids          : true
-  entity_output     : as_char
-  toc_levels        : [1, 2, 3, 4, 5, 6]
-  smart_quotes      : lsquo,rsquo,ldquo,rdquo
-  input             : GFM
-  hard_wrap         : false
-  footnote_nr       : 1
-  show_warnings     : false
+    auto_ids          : true
+    entity_output     : as_char
+    toc_levels        : [1, 2, 3, 4, 5, 6]
+    smart_quotes      : lsquo,rsquo,ldquo,rdquo
+    input             : GFM
+    hard_wrap         : false
+    footnote_nr       : 1
+    show_warnings     : false
 
 rdiscount:
-  extensions        : []
+    extensions        : []
 
 redcarpet:
-  extensions        : []
+    extensions        : []
 
 # Jekyll Compress HTML
 # [jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html)
 # A Jekyll layout that compresses HTML in pure Liquid.
 compress_html:
-  clippings: all
-  comments: ['<!-- ', ' -->']
-  endings: []
-  blanklines: false
-  profile: false
-  startings: []
+    clippings: all
+    comments: ['<!-- ', ' -->']
+    endings: []
+    blanklines: false
+    profile: false
+    startings: []
 
 # Markdown Processors
 #--------------------
@@ -285,85 +285,85 @@ compress_html:
 # grunt build task to first perform token replacement in _config.yml prior to
 # calling jekyll build.
 collections:
-  posts:
-    output: true # Render posts collection by default
+    posts:
+        output: true # Render posts collection by default
 
 # Defaults
 # Default front matter variables.
 defaults:
-  -
-    scope:
-      path: assets/fonts
-    values:
-      font: true
-  -
-    scope:
-      path: assets/images
-    values:
-      image: true
-  -
-    scope:
-      path: pages
-      type: pages
-    values:
-      layout: page
-      published: true
-      # WARNING: The permalink variable doesn't work for pages when defined
-      # here.
-  -
-    scope:
-      path: collections/_posts
-      type: posts
-    values:
-      layout: post
-      published: true
-  # -
-  #   scope:
-  #     path: MD/about.md
-  #   values:
-  #     layout: page
-  #     published: true
-  #     # permalink: /:name/
-  # # -
-  # #   scope:
-  # #     path: 'Source/MD/index.markdown'
-  # #     type: 'other'
-  # #   values:
-  # #     layout: 'home'
-  # #     permalink: '/hihoware/you'
-  # #     published: true
-  # -
-  #   scope:
-  #     path: Source/MD
-  #     type: pages
-  #   values:
-  #     layout: page
-  #     permalink: /:title/
-  #     published: true
-  # -
-  #   scope:
-  #     path: Source/HTML
-  #     type: pages
-  #   values:
-  #     layout: page
-  #     permalink: /:title/
-  #     published: true
-  # -
-  #   scope:
-  #     path: Source/MD
-  #     type: posts
-  #   values:
-  #     layout: post
-  #     published: true
-  #     # title: '...'
-  # -
-  #   scope:
-  #     path: Source/HTML
-  #     type: posts
-  #   values:
-  #     layout: post
-  #     published: true
-  #     # title: '...'
+    -
+      scope:
+          path: assets/fonts
+      values:
+          font: true
+    -
+      scope:
+          path: assets/images
+      values:
+          image: true
+    -
+      scope:
+          path: pages
+          type: pages
+      values:
+          layout: page
+          published: true
+          # WARNING: The permalink variable doesn't work for pages when defined
+          # here.
+    -
+      scope:
+          path: collections/_posts
+          type: posts
+      values:
+          layout: post
+          published: true
+    # -
+    #   scope:
+    #       path: MD/about.md
+    #   values:
+    #       layout: page
+    #       published: true
+    #       # permalink: /:name/
+    # # -
+    # #   scope:
+    # #       path: 'Source/MD/index.markdown'
+    # #       type: 'other'
+    # #   values:
+    # #       layout: 'home'
+    # #       permalink: '/hihoware/you'
+    # #       published: true
+    # -
+    #   scope:
+    #       path: Source/MD
+    #       type: pages
+    #   values:
+    #       layout: page
+    #       permalink: /:title/
+    #       published: true
+    # -
+    #   scope:
+    #       path: Source/HTML
+    #       type: pages
+    #   values:
+    #       layout: page
+    #       permalink: /:title/
+    #       published: true
+    # -
+    #   scope:
+    #       path: Source/MD
+    #       type: posts
+    #   values:
+    #       layout: post
+    #       published: true
+    #       # title: '...'
+    # -
+    #   scope:
+    #       path: Source/HTML
+    #       type: posts
+    #   values:
+    #       layout: post
+    #       published: true
+    #       # title: '...'
 
 # Encoding
 # The encoding of files.
