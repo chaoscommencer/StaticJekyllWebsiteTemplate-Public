@@ -2,7 +2,7 @@
 ---
 
 // Import base theme.
-@import "minima";
+@forward "minima";
 
 // Import user-selected syntax highlighter stylesheet.
-@import "Syntax Highlighter";
+@forward "Syntax Highlighter";
