@@ -129,5 +129,5 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
     # TZInfo::Data
     # TZInfo::Data contains data from the IANA Time Zone database packaged as
     # Ruby modules for use with TZInfo.
-    gem 'tzinfo-data', '~> 1.2025', '>= 1.2025.1', :platforms => [:mingw, :mswin]
+    gem 'tzinfo-data', '~> 1.2025', '>= 1.2025.2', :platforms => [:mingw, :mswin]
 end
