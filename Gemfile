@@ -47,7 +47,8 @@ group :production do
   # To upgrade, run `bundle update github-pages`.  Up to version 232.
   # gem 'multipart-post', '~> 2.1', '>= 2.1.1'
   # gem 'sassc', '~> 2.3'
-  gem 'github-pages', '~> 232', group: :jekyll_plugins #, :platforms => :x64_mingw32
+  # WARNING: The GitHub Pages plugin does not support newer versions of Jekyll
+  # gem 'github-pages', '~> 232', group: :jekyll_plugins #, :platforms => :x64_mingw32
 end
 
 # If you have any plugins, put them here!
