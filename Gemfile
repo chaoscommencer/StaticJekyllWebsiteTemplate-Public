@@ -35,9 +35,9 @@ ruby '3.3.4'
 #   # A simple, blog-aware, static-site generator.
 #   # Mandate the version of Jekyll to be run.  Run Jekyll as follows:
 #   # bundle exec jekyll serve
-#   gem 'jekyll', '~> 3.10.0'
+#   gem 'jekyll', '~> 4.4.1'
 # end
-gem 'jekyll', '~> 3.10.0'
+gem 'jekyll', '~> 4.4.1'
 
 # Groups exist for test, development, production...
 group :production do
@@ -55,7 +55,11 @@ end
 group :jekyll_plugins do
   # jekyll-commonmark-ghpages
   # A CommonMark generator for Jekyll
-  gem 'jekyll-commonmark-ghpages', '~> 0.5.1'
+  # WARNING: jekyll-commonmark-ghpages >= 0.5.1 depends on jekyll >= 3.9, < 4.0
+  # and is not supported by modern versions of Jekyll (> 4.0)
+  # gem 'jekyll-commonmark-ghpages', '~> 0.5.1'
+  gem 'kramdown', '~> 2.5.1'
+  # gem 'kramdown-parser-gfm', '~> 1.1.0'
 
   # jekyll-feed
   # A Jekyll plugin to generate an Atom feed of your Jekyll posts.
