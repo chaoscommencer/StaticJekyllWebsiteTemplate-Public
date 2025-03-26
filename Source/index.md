@@ -6,11 +6,11 @@ layout: home
 ---
 
 <h1>
-  {{ site.data.Settings.title}}
+    {{ site.data.Settings.title}}
 </h1>
 
 <p>
-  {{ site.data.Settings.description }}
+    {{ site.data.Settings.description }}
 </p>
 
 <p>
