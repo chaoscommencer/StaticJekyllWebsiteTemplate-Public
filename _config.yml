@@ -61,6 +61,10 @@ sass:
   # SASS Directory
   # Change the directory where Jekyll will read SASS files.
   sass_dir: CSS
+  # Line Comments
+  # When true, include the line number and file name of the source in the
+  # compiled CSS file.
+  line_comments: false
   # Style
   # Change the output format for the generated CSS files.
   # Options:
