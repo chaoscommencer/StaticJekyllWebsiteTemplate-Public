@@ -88,7 +88,7 @@ group :jekyll_plugins do
   # A Jekyll plugin to add metadata tags for search engines and social networks
   # to better index and display your site's content.
   # NOTE: SEO => Search Engine Optimization
-  gem 'jekyll-seo-tag', '~> 2.8.0'
+  gem 'jekyll-seo-tag', '~> 2.9.1'
 end
 
 # WDM - Windows Directory Manager
