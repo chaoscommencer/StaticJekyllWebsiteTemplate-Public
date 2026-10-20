@@ -108,7 +108,7 @@ group :development do
   # A simple, easy-to-extend, drop-in replacement for the pygments syntax
   # highlighter.
   # NOTE: Only required for development.
-  gem 'rouge', '~> 3.30.0'
+  gem 'rouge', '~> 4.7.0'
 end
 
 # Minima
