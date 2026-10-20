@@ -58,7 +58,7 @@ group :jekyll_plugins do
 
   # jekyll-feed
   # A Jekyll plugin to generate an Atom feed of your Jekyll posts.
-  gem 'jekyll-feed', '~> 0.17.0'
+  gem 'jekyll-feed', '~> 0.18.0'
 
   # jekyll-livereload
   # The Jekyll LiveReload plugin adds additional command line options to the
