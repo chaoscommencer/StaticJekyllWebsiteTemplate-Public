@@ -32,10 +32,9 @@ ruby '3.4.9'
 #   # bundle exec jekyll serve
 #   gem 'jekyll', '~> 4.0.1'
 # end
-gem 'jekyll', '~> 3.10.0'
+gem 'jekyll', '~> 4.4.1'
 
-# Ruby 3.4+ no longer ships these as default gems; Jekyll 3.x requires them.
-gem 'base64', '~> 0.3.0'
+# Ruby 3.4+ no longer ships bigdecimal as a default gem; Liquid 4 requires it.
 gem 'bigdecimal', '~> 4.0'
 
 # Groups exist for test, development, production...
@@ -52,9 +51,9 @@ end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  # jekyll-commonmark-ghpages
+  # jekyll-commonmark
   # A CommonMark generator for Jekyll
-  gem 'jekyll-commonmark-ghpages', '~> 0.5.1'
+  gem 'jekyll-commonmark', '~> 1.4.0'
 
   # jekyll-feed
   # A Jekyll plugin to generate an Atom feed of your Jekyll posts.
@@ -109,7 +108,7 @@ group :development do
   # A simple, easy-to-extend, drop-in replacement for the pygments syntax
   # highlighter.
   # NOTE: Only required for development.
-  gem 'rouge', '~> 3.30.0'
+  gem 'rouge', '~> 4.7.0'
 end
 
 # Minima
