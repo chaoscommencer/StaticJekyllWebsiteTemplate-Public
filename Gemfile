@@ -22,7 +22,7 @@
 source 'https://rubygems.org'
 
 # Enforce minimum required Ruby version and patch level.
-ruby '3.3.4'
+ruby '3.4.9'
 
 # Groups exist for test, development, production...
 # group :development do
@@ -33,6 +33,10 @@ ruby '3.3.4'
 #   gem 'jekyll', '~> 4.0.1'
 # end
 gem 'jekyll', '~> 3.10.0'
+
+# Ruby 3.4+ no longer ships these as default gems; Jekyll 3.x requires them.
+gem 'base64', '~> 0.3.0'
+gem 'bigdecimal', '~> 4.0'
 
 # Groups exist for test, development, production...
 group :production do
