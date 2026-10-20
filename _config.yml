@@ -243,6 +243,8 @@ strict_front_matter: true
 # A strongly defined, highly compatible specification of Markdown, CommonMark
 # is the current markdown processor used by Visual Studio Code.
 commonmark:
+  # Raw HTML in Markdown is stripped; use fenced code blocks, not {% highlight %}.
+  # Add 'UNSAFE' to allow raw HTML (e.g. <img>); 'tagfilter' still blocks <script>, <iframe>, etc.
   options: ['SMART', 'FOOTNOTES']
   extensions: ['strikethrough', 'autolink', 'table', 'tagfilter']
 
