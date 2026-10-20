@@ -89,6 +89,11 @@ group :jekyll_plugins do
   # to better index and display your site's content.
   # NOTE: SEO => Search Engine Optimization
   gem 'jekyll-seo-tag', '~> 2.9.1'
+
+  # jekyll-sitemap
+  # A Jekyll plugin to silently generate a sitemaps.org compliant sitemap for
+  # your Jekyll site.
+  gem 'jekyll-sitemap', '~> 1.4.0'
 end
 
 # WDM - Windows Directory Manager
