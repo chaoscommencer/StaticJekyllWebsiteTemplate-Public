@@ -22,7 +22,7 @@
 source 'https://rubygems.org'
 
 # Enforce minimum required Ruby version and patch level.
-ruby '3.3.4'
+ruby '3.4.9'
 
 # Groups exist for test, development, production...
 # group :development do
@@ -34,6 +34,10 @@ ruby '3.3.4'
 # end
 gem 'jekyll', '~> 3.10.0'
 
+# Ruby 3.4+ no longer ships these as default gems; Jekyll 3.x requires them.
+gem 'base64', '~> 0.3.0'
+gem 'bigdecimal', '~> 4.0'
+
 # Groups exist for test, development, production...
 group :production do
     # github-pages
@@ -42,7 +46,8 @@ group :production do
     # To upgrade, run `bundle update github-pages`.  Up to version 204.
 #     gem 'multipart-post', '~> 2.1', '>= 2.1.1'
 #     gem 'sassc', '~> 2.3'
-    gem 'github-pages', '~> 232', group: :jekyll_plugins #, :platforms => :x64_mingw32
+    # Disabled: github-pages 232 pulls in rubyzip < 3.0 (path traversal, fixed in 3.4.0) via jekyll-remote-theme.
+#     gem 'github-pages', '~> 232', group: :jekyll_plugins #, :platforms => :x64_mingw32
 end
 
 # If you have any plugins, put them here!
@@ -53,7 +58,7 @@ group :jekyll_plugins do
 
   # jekyll-feed
   # A Jekyll plugin to generate an Atom feed of your Jekyll posts.
-  gem 'jekyll-feed', '~> 0.17.0'
+  gem 'jekyll-feed', '~> 0.18.0'
 
   # jekyll-livereload
   # The Jekyll LiveReload plugin adds additional command line options to the
@@ -83,7 +88,12 @@ group :jekyll_plugins do
   # A Jekyll plugin to add metadata tags for search engines and social networks
   # to better index and display your site's content.
   # NOTE: SEO => Search Engine Optimization
-  gem 'jekyll-seo-tag', '~> 2.8.0'
+  gem 'jekyll-seo-tag', '~> 2.9.1'
+
+  # jekyll-sitemap
+  # A Jekyll plugin to silently generate a sitemaps.org compliant sitemap for
+  # your Jekyll site.
+  gem 'jekyll-sitemap', '~> 1.4.0'
 end
 
 # WDM - Windows Directory Manager
@@ -105,7 +115,7 @@ end
 # Minima
 # A beautiful minimal theme for Jekyll.  This is the default theme for new
 # Jekyll sites. You may change this to anything you like.
-gem 'minima', '~> 2.5.1'
+gem 'minima', '~> 2.5.2'
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data
 # gem and associated library.
